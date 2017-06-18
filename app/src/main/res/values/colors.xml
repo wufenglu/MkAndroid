@@ -10,4 +10,6 @@
     <color name="color_3b98fd">#3b98fd</color>
     <color name="color_c2c2c2">#c2c2c2</color>
     <color name="color_orange">#f43334</color>
+    <color name="line">#ffd3dde6</color>
+    <color name="griditems_bg">#ffe8ecef</color>
 </resources>

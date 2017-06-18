@@ -78,7 +78,10 @@ public class DoughnutView extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(getResources().getColor(R.color.color_orange));//Color.WHITE
         paint.setAntiAlias(true);
-        RectF rectF = new RectF((width > height ? Math.abs(width - height) / 2 : 0) + doughnutWidth / 2, (height > width ? Math.abs(height - width) / 2 : 0) + doughnutWidth / 2, width - (width > height ? Math.abs(width - height) / 2 : 0) - doughnutWidth / 2, height - (height > width ? Math.abs(height - width) / 2 : 0) - doughnutWidth / 2);
+        RectF rectF = new RectF((width > height ? Math.abs(width - height) / 2 : 0) + doughnutWidth / 2,   //left
+                (height > width ? Math.abs(height - width) / 2 : 0) + doughnutWidth / 2,     //top
+                width - (width > height ? Math.abs(width - height) / 2 : 0) - doughnutWidth / 2,   //right
+                height - (height > width ? Math.abs(height - width) / 2 : 0) - doughnutWidth / 2);  //bottom
         canvas.drawArc(rectF, 0, 360, false, paint);
 
         //画彩色圆环
@@ -117,7 +120,7 @@ public class DoughnutView extends View {
          * public void drawCircle (float cx, float cy, float radius, Paint paint)
          * cx：圆心的x坐标。 cy：圆心的y坐标。 radius：圆的半径。 paint：绘制时所使用的画笔。
          * */
-        canvas.drawCircle(width / 2, height / 2, fontSize * 2, paint);
+        canvas.drawCircle(width / 2, height / 2, doughnutWidth * 1.45f , paint);
 
         //画中间数值
         canvas.rotate(90, width / 2, height / 2);
@@ -126,7 +129,8 @@ public class DoughnutView extends View {
         paint.setTextSize(fontSize);
         paint.setTextAlign(Paint.Align.CENTER);
         float baseLine = height / 2 - (paint.getFontMetrics().descent + paint.getFontMetrics().ascent) / 2;
-        canvas.drawText((int) (currentValue / 360f * 100) + "%", width / 2, baseLine, paint);
+//        canvas.drawText((int) (currentValue / 360f * 100) + "%", width / 2, baseLine, paint);
+        canvas.drawText("快速体检", width / 2, baseLine, paint);
     }
 
     /**

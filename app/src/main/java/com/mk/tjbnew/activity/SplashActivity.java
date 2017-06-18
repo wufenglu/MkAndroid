@@ -36,7 +36,6 @@ public class SplashActivity extends BaseActivity {
 	}
 
 	public void initView() {
-		L.d("启动引导页");
 		L.i("启动引导页2");
 		//图标的放大及渐变效果
 		ImageView splash=(ImageView) findViewById(R.id.splash_image);
