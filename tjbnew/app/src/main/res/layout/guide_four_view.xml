@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/start_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="false"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ui_3"/>
+
+
+    <!--<Button
+        android:id="@+id/start_btn"
+        android:layout_width="249dp"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dip"
+        android:background="@drawable/start_btn_selector"
+        android:gravity="center"
+        android:text="开启幸福之旅"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        />
+-->
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="bottom"
+    android:paddingBottom="2dp" >
+
+    <RelativeLayout
+        android:id="@+id/tab_tijian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="clickTab" >
+
+        <ImageView
+            android:id="@+id/tab_tijian_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/home_tab_tijian_selected" />
+
+        <TextView
+            android:id="@+id/tab_tijian_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="体检"
+            android:textColor="@color/color_3b98fd"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tab_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" 
+        android:onClick="clickTab">
+
+        <ImageView
+            android:id="@+id/tab_data_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/home_tab_data_normal" />
+
+        <TextView
+            android:id="@+id/tab_data_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="数据"
+            android:textColor="@color/color_c2c2c2"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tab_life"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" 
+        android:onClick="clickTab">
+
+        <ImageView
+            android:id="@+id/tab_life_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/home_tab_life_normal" />
+
+        <TextView
+            android:id="@+id/tab_life_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="健康"
+            android:textColor="@color/color_c2c2c2"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tab_personal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:onClick="clickTab" >
+
+        <ImageView
+            android:id="@+id/tab_personal_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/home_tab_personal_normal" />
+
+        <TextView
+            android:id="@+id/tab_personal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="我的"
+            android:textColor="@color/color_c2c2c2"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>
