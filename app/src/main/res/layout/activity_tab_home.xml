@@ -91,22 +91,21 @@
                     android:clickable="true"
                     android:onClick="clickTab" />
             </RelativeLayout>
+
             <com.mk.tjbnew.view.HomeFunctionGridView
                 android:id="@+id/gv_home_function"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
                 android:cacheColorHint="#00000000"
                 android:clickable="true"
                 android:gravity="center"
                 android:horizontalSpacing="0.0dip"
-                android:listSelector="@null"
+                android:listSelector="#00000000"
                 android:numColumns="2"
                 android:scrollbars="none"
                 android:stretchMode="columnWidth"
-                android:verticalSpacing="0.0dip"
-                />
+                android:verticalSpacing="0.0dip" />
         </LinearLayout>
-
+        <!--android:listSelector="@null"-->
     </ScrollView>
 </LinearLayout>

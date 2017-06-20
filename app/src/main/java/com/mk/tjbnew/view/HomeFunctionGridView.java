@@ -1,11 +1,20 @@
 package com.mk.tjbnew.view;
 
+import android.content.Context;
+import android.util.AttributeSet;
 import android.widget.GridView;
 
 public class HomeFunctionGridView extends GridView {
-    public HomeFunctionGridView(android.content.Context context,
-                                android.util.AttributeSet attrs) {
+    public HomeFunctionGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    public HomeFunctionGridView(Context context) {
+        super(context);
+    }
+
+    public HomeFunctionGridView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
     }
 
     /**

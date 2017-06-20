@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +32,7 @@ public class HomeGridViewAdapter extends BaseAdapter {
 
     public HomeGridViewAdapter(Context context, ArrayList<HomeItemfunctionModel> homeItemfunctionModelArrayList) {
         inflater = LayoutInflater.from(context);
+//        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.homeItemfunctionModelArrayList = homeItemfunctionModelArrayList;
     }
 
@@ -53,8 +55,11 @@ public class HomeGridViewAdapter extends BaseAdapter {
     public View getView(int i, View convertView, ViewGroup viewGroup) {
         ViewHolder holder;
         if(convertView == null || convertView.getTag() == null) {
-            convertView = inflater.inflate(R.layout.home_grid_item, null);
             holder = new ViewHolder();
+            convertView = inflater.inflate(R.layout.home_grid_item, null);
+            convertView.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+//            convertView = inflater.inflate(R.layout.home_grid_item, viewGroup, false);
+
             holder.iv_function_icon = (ImageView) convertView.findViewById(R.id.iv_function_icon);
             holder.tv_function_name = (TextView) convertView.findViewById(R.id.tv_function_name);
             convertView.setTag(holder);
