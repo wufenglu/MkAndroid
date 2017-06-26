@@ -3,6 +3,8 @@ package com.mk.tjbnew.fragment;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.mk.tjbnew.R;
+import com.mk.tjbnew.activity.vision.MainActivity;
 import com.mk.tjbnew.adapter.HomeGridViewAdapter;
 import com.mk.tjbnew.model.HomeItemfunctionModel;
 import com.mk.tjbnew.view.DoughnutView;
@@ -55,7 +58,10 @@ public class HomeFragment extends Fragment {
         ((DoughnutView) view.findViewById(R.id.doughnutView)).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(instance, "点击了快速体检按钮", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), MainActivity.class);
+                startActivity(intent);
+                //Toast.makeText(instance, "点击了快速体检按钮", Toast.LENGTH_SHORT).show();
             }
         });
     }
